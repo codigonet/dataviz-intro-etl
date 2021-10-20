@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server /src",
     "etl": "node src/etl-web.js",
-    "etl:xlsx": "node src/etl-xlsx.js"
+    "etl:xlsx": "node src/etl-xlsx.js",
+    "etl:csv": "node src/etl-xlsx-csv.js"
   },
   "keywords": [
     "ETL",
