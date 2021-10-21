@@ -69,7 +69,8 @@ for (let idx = 0; idx < hoja_json.length; idx++) {
             data_comuna['DATA']['PRESUPUESTO DECRETADO(M$)'] = hoja_json[idx]['PRESUPUESTO DECRETADO(M$)'];
             data_comuna['DATA']['GASTO (M$)'] = hoja_json[idx]['GASTO (M$)'];
             data_comuna['DATA']['SALDO (M$)'] = hoja_json[idx]['SALDO (M$)'];
-            data_comuna['DATA']['GEO'] = GEO[comuna_hoja];
+            data_comuna['DATA']['GEO_LAT'] = GEO[comuna_hoja][0];
+            data_comuna['DATA']['GEO_LON'] = GEO[comuna_hoja][1];
         }
 
         // Se almacena en la variable la información procesada
@@ -95,7 +96,8 @@ const csvWriter = createCsvWriter({
         { id: 'PRESUPUESTO DECRETADO(M$)', title: 'PRESUPUESTO DECRETADO(M$)' },
         { id: 'GASTO (M$)', title: 'GASTO (M$)' },
         { id: 'SALDO (M$)', title: 'SALDO (M$)' },
-        { id: 'GEO', title: 'GEO' },
+        { id: 'GEO_LAT', title: 'GEO_LAT' },
+        { id: 'GEO_LON', title: 'GEO_LON' },
     ]
 });
 
