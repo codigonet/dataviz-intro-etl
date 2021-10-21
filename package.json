@@ -7,7 +7,8 @@
     "start": "http-server /src",
     "etl": "node src/etl-web.js",
     "etl:xlsx": "node src/etl-xlsx.js",
-    "etl:csv": "node src/etl-xlsx-csv.js"
+    "etl:csv": "node src/etl-xlsx-csv.js",
+    "etl:region": "node src/etl-region-csv.js"
   },
   "keywords": [
     "ETL",
