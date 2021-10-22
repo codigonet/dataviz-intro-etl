@@ -32,13 +32,13 @@ var hoja_json = XLSX.utils.sheet_to_json(hoja); // Convierte la hoja a formato J
 log("Encabezados en Hoja", hoja_json[0]);
 
 // Preparar variable donde se mantendrá la transformación, en formato JSON
-var output_data = {} // Objeto Arreglo "vacío", es decir sin datos
+var output_data = {} // Objeto JSON "vacío", es decir sin datos
 
 // Ciclo para recorrer todas las filas de la hoja
 for (let idx = 0; idx < hoja_json.length; idx++) {
     /*
     obs: al recorrer cada fila, está se referencia por la variable "idx"
-  
+    hoja_json[idx] = [][][][]
     Extraer datos de acuerdo a filtros:
       - REGION
       - COMUNAS
@@ -109,7 +109,7 @@ for (n = 0; n < COMMUNES.length; n++) {
     if (output_data[comuna]) {
         let data_de_comuna = output_data[comuna]["DATA"];
 
-        log("Data comuna", data_de_comuna);
+        //log("Data comuna", data_de_comuna);
         
         data_de_csv.push(data_de_comuna);
     }    

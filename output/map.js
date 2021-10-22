@@ -24,10 +24,10 @@ function showMap() {
       cityLon = unpack(rows, "GEO_LON"),
       citySize = [],
       hoverText = [],
-      scale = 5000000;
+      scale = 10;
     for (var i = 0; i < countryPop.length; i++) {
       var currentSize = countryPop[i] / scale;
-      var currentText = countryName[i] + " - Población: " + (countryPop[i]) + " (miles)";
+      var currentText = countryName[i] + " - Presupuesto: " + (countryPop[i]) + " (miles)";
       citySize.push(currentSize);
       hoverText.push(currentText);
     }
@@ -43,6 +43,7 @@ function showMap() {
         text: hoverText,
         marker: {
           size: citySize,
+          colorscale: 'Greens',
           line: {
             color: "black",
             width: 1
